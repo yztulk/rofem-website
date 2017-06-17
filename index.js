@@ -5,8 +5,7 @@ var fs = require("fs");
 
 app.use(express.static(path.join(__dirname, '/metronic')));
 
-var port = 8080;
-
+var port = process.env.PORT || 3000;
 var server = app.listen(port, function () {
-  console.log("Website is running on port " + port);
+  console.log('Listening on ' + port);
 });
